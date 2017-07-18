@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -8,6 +9,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ImageView
             android:id="@+id/imageView"
             android:contentDescription="Brush_Teeth"
@@ -15,16 +17,19 @@
             android:layout_height="match_parent"
             android:src="@drawable/teeth_transparent"
             android:layout_margin="60dp"/>
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="@style/Widget.AppCompat.ProgressBar"
+
+        <com.todddavies.components.progressbar.ProgressWheel
+            android:id="@+id/pw_spinner"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:indeterminate="false" />
+            android:visibility="visible"
+            ProgressWheel:pwBarColor="@android:color/background_dark"
+            ProgressWheel:pwBarLength="60dp"
+            ProgressWheel:pwBarWidth="10dp"
+            ProgressWheel:pwRadius="10dp"
+            ProgressWheel:pwRimColor="@android:color/darker_gray"
+            ProgressWheel:pwRimWidth="100dp"
+            ProgressWheel:pwTextColor="#222"
+            ProgressWheel:pwTextSize="1sp" />
     </FrameLayout>
-
-
-
-
 </LinearLayout>
